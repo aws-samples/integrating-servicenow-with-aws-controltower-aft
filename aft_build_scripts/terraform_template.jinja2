@@ -1,0 +1,20 @@
+locals {
+  {{ workload_type }}_default_tags = {
+   
+  }
+
+}
+
+variable "{{ workload_type }}" {
+    default = {}
+    description = "Map variable referencing the data for accounts created under workload-test-sandbox"
+}
+
+module "{{ workload_type }}-request" {
+  source = "./modules/aft-account-request"
+  for_each = var.{{ workload_type }}
+  control_tower_parameters = each.value["control_tower_parameters"]
+  change_management_parameters = each.value["change_management_parameters"]
+  account_tags = merge(local.{{ workload_type }}_default_tags,each.value["account_tags"])
+  account_customizations_name = each.value["account_customizations_name"]
+}

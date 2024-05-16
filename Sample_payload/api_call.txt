@@ -1,0 +1,4 @@
+# API Call to API G/W Endpoint
+<API Endpoint from Output>
+
+curl -X POST "<API Endpoint from Output>" -H "Content-Type: application/json" -d '{"accountOwnerName":"","businessUnit":"","cloudAccountType":"","environment":"","SNOWTicketID":"","accountEmail":"","changeRequestedby":"","change_reason":"Provision account","SSOUserFirstName":"","SSOUserLastName":""}'

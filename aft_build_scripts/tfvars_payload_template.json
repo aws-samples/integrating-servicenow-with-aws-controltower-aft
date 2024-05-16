@@ -1,0 +1,16 @@
+{
+    "AccountName": "",
+    "AccountEmail": "",
+    "ManagedOrganizationalUnit": "",
+    "SSOUserEmail": "",
+    "SSOUserFirstName": "",
+    "SSOUserLastName": "",
+    "change_management_parameters": {
+        "change_reason": "",
+        "change_requested_by": ""
+    },
+    "account_tags": {
+        "Environment": ""
+    },
+    "account_customizations_name": ""
+}

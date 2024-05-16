@@ -1,0 +1,46 @@
+{
+  "servicenow_to_tfvars" : 
+    {
+    "accountName": "",
+    "businessUnit": "",
+    "environment": "", 
+    "cloudAccountType": "",
+    "ITSMTicketID": "",
+    "accountEmail" : "",
+    "changeRequestedby" : "",
+    "change_reason" : ""
+  },
+
+    "businessunit_to_requestype" : {
+        "corporate" : {
+            "request_type" : "workload-cbt",
+            "account_customizations_name" : "WORKLOAD_Account_Customization",
+            "managed_org_unit" : {
+                "Sandbox" : "Sand Box (ou-rre0-65u6iim9)",
+                "Production" : "Prod (ou-rre0-yko5dits)",
+                "Non-production" : "Non Prod (ou-rre0-j81mnjyj)"
+        
+        }
+    },
+        "commercial" : {
+            "request_type" : "workload-com",
+            "account_customizations_name" : "WORKLOAD_Account_Customization",
+            "managed_org_unit" : {
+                "Sandbox" : "Sand Box (ou-rre0-ne7hfaq4)",
+                "Production" : "Prod (ou-rre0-ptoibv8v)",
+                "Non-production" : "Non Prod (ou-rre0-pm1rxfax)"
+            }
+        },
+        "supply-chain" : {
+            "request_type" : "workload-spc",
+            "account_customizations_name" : "WORKLOAD_Account_Customization",
+            "managed_org_unit" : {
+     
+                "Sandbox" : "Sand Box (ou-rre0-5q8drk5c)",
+                "Production" : "Prod (ou-rre0-uyie7r1c)",
+                "Non-production" : "Non Prod (ou-rre0-dapy7jet)"
+        
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "accountName": "<account name for new account vended>",
+    "businessUnit": "<Business unit which should corresponde to OU provisioned>",
+    "cloudAccountType": "<Production or Non-Production>",
+    "environment": "<Production,Sandbox,Development,QA and Test>",
+    "SNOWTicketID": "<Service now Ticket ID>",
+    "accountEmail": "<Unique Account Email>",
+    "changeRequestedby": "<User Name of the account requestor>",
+    "change_reason": "Provision account",
+    "SSOUserFirstName": "<SSO First name (Optional)>",
+    "SSOUserLastName": "<SSO Last name (Optional)>"
+}

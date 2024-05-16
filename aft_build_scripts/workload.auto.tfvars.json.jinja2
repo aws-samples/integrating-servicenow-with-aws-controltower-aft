@@ -1,0 +1,53 @@
+{
+    "{{ workload_type }}": {
+           "{{ account.AccountName }}" : {
+            "control_tower_parameters":{
+            {% if account.AccountName %} 
+            "AccountName"          : "{{ account.AccountName }}",
+            {% else %}
+            "AccountName"          : "ERROR: Parameter AccountName is missing",
+            {% endif %}
+            {% if account.AccountEmail %} 
+            "AccountEmail"          : "{{ account.AccountEmail }}",
+            {% else %}
+            "AccountEmail"          : "ERROR: Parameter AccountEmail is missing",
+            {% endif %}
+            {% if account.ManagedOrganizationalUnit %} 
+            "ManagedOrganizationalUnit"          : "{{ account.ManagedOrganizationalUnit }}", 
+            {% else %}
+            "ManagedOrganizationalUnit"          : "ERROR: Parameter ManagedOrganizationalUnit is missing",
+            {% endif %}
+            {% if account.SSOUserEmail %} 
+            "SSOUserEmail"          : "{{ account.SSOUserEmail }}", 
+            {% else %}
+            "SSOUserEmail"          : "ERROR: Parameter SSOUserEmail is missing",
+            {% endif %}
+            {% if account.SSOUserFirstName %} 
+            "SSOUserFirstName"          : "{{ account.SSOUserFirstName }}", 
+            {% else %}
+            "SSOUserFirstName"          : "ERROR: Parameter SSOUserFirstName is missing",
+            {% endif %}
+            {% if account.SSOUserLastName %} 
+            "SSOUserLastName"          : "{{ account.SSOUserLastName }}" 
+            {% else %}
+            "SSOUserLastName"          : "ERROR: Parameter SSOUserLastName is missing"
+            {% endif %}
+            },
+            {% if (account.change_management_parameters.change_requested_by and account.change_management_parameters.change_reason) %} 
+            "change_management_parameters"          : {{ account.change_management_parameters | tojson }}, 
+            {% else %}
+            "change_management_parameters"          : "ERROR: Parameter change_management_parameters is missing",
+            {% endif %}
+            {% if account.account_tags %} 
+            "account_tags"          : {{ account.account_tags | tojson }}, 
+            {% else %}
+            "account_tags"          : "ERROR: Parameter account_tags is missing",
+            {% endif %}
+            {% if account.account_customizations_name %} 
+            "account_customizations_name"          : "{{ account.account_customizations_name }}"
+            {% else %}
+            "account_customizations_name"          : "ERROR: Parameter account_customizations_name is missing"
+            {% endif %}
+           }    
+    }
+}
