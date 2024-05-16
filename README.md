@@ -85,9 +85,11 @@ cdk destroy
 
 Gopinath Jagadesan - Senior Cloud Infrastructure Architect - gopinjag@amazon.com 
 
-Suresh Poopandi - Principal SA - GLS - tumallap@amazon.com
+Suresh Poopandi - Principal Solutions Architect - GLS - ssurpo@amazon.com
 
-Satish Kumar Nadendla - Senior Cloud Infrastructure Architect - nadsatis@amazon.com
+Ryan Griffin - Senior Cloud Infrastructure Architect - ryandg@amazon.com
+
+Balu Rajendran - Balu Rajendran - rajendbc@amazon.com
 
 ## Security
 
