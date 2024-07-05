@@ -32,8 +32,8 @@ This solution shows how to integrate Account factory for Terraform (AFT) with th
 * An AWS Identity and Management (IAM) account with administrator privileges for the services used in this solution.
 * Setting up Landing Zone using AWS Control Tower adhering to Multi account best practices. 
 * Setup Account Factory for terraform on the AFT Management account using the steps specified at  deploy AWS Control tower Account factory for terraform (AFT) documentation.
-* Configure the AWS credentials of the AFT management account in the terminal. Install the AWS CDK Toolkit. If you’re unfamiliar with the steps, then review the AWS CDK workshop for help. 
-* ServiceNow Instance with the Service now Form and workflow setup to invoke the API Gateway and receive response back from Lambda function
+* Configure the AWS credentials of the AFT management account in the terminal. Install the [AWS CDK Toolkit](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html). If you’re unfamiliar with the steps, then review the [AWS CDK workshop](https://cdkworkshop.com/) for help. 
+* ServiceNow Instance with the Service now Form and workflow setup to invoke the API Gateway and receive response back from Lambda function. The steps to set this up for the form being used for this blog can be found in the [repository](./Snow_form_setup/)
 
 ## Deployment Steps 
 

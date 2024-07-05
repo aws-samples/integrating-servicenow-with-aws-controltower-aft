@@ -3,6 +3,7 @@ from aws_cdk import (
     aws_codecommit as codecommit,
     aws_codebuild as codebuild,
     aws_lambda as lambda_func,
+    aws_lambda_python_alpha as lambda_alpha,
     aws_iam as iam,
     aws_sns as sns,
     aws_apigateway as apigateway,
@@ -155,6 +156,13 @@ class AftIntegrationPipelineStack(Stack):
             resources=["*"]
         ))
 
+        # Layer for the Lambda Function 
+        lambda_layer = lambda_alpha.PythonLayerVersion(
+            self, "aft-snow-integration-layer",
+            entry="./lambda/layer",
+            compatible_runtimes=[lambda_func.Runtime.PYTHON_3_12],
+            layer_version_name="aft-snow-integration-layer")
+        
         # Define the Lambda function to return Status to the snow Tool
         lambda_function = lambda_func.Function(
             self, "aft-snow-integration-function",
@@ -164,6 +172,7 @@ class AftIntegrationPipelineStack(Stack):
             role= snow_lambda_role,
             tracing = lambda_func.Tracing.ACTIVE,
             code=lambda_func.Code.from_asset("./lambda/aft_snow_integration"),
+            layers=[lambda_layer],
             timeout=Duration.seconds(300),
             environment = {
                 "api_endpoint_url": self.node.try_get_context("snow_api_endpoint_url"),
@@ -201,6 +210,13 @@ class AftIntegrationPipelineStack(Stack):
                       topic=aft_notification_topic,
                       endpoint=lambda_function.function_arn,
                       protocol=sns.SubscriptionProtocol.LAMBDA)
+        
+        # Grant Permission for SNS topic to invoke the Lambda function
+        lambda_function.add_permission(
+            "sns_permission",
+            action="lambda:InvokeFunction",
+            principal=iam.ServicePrincipal("sns.amazonaws.com"),
+            source_arn=f"arn:aws:sns:{current_region}:{current_account_id}:aft-notifications")
         
         # Lambda authorizer for the API Gateway and its configuration 
 

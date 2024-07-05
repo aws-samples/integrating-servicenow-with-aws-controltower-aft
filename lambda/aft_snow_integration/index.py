@@ -53,29 +53,31 @@ def get_last_execution_status(pipeline_name):
 
 def api_call(build_status_code,snow_taskid,account_details):
     # Replace 'YOUR_API_ENDPOINT' with the actual API endpoint URL
-    # api_endpoint = api_endpoint_url
+    api_endpoint = api_endpoint_url
 
     secrets_client = boto3.client('secretsmanager', region_name='us-east-1')
     get_secret = secrets_client.get_secret_value(SecretId=snow_secret_full_arn)
     snow_secret_data = json.loads(get_secret['SecretString'])
-    username = snow_secret_data['password']
-    password = snow_secret_data['username']
-    auth = (username,password)
+    username = snow_secret_data['username']
+    password = snow_secret_data['password']
+    logger.info(f"the snow username is {username}")
+    logger.info(f"the snow password is {password}")
+    snow_auth = (username,password)
 
     # Replace 'YOUR_PAYLOAD' with the JSON data you want to send in the POST request
     payload = {
-        "ctask_object":{"u_state":"900","u_status":"930"},
-        "ctask_variable":{},
-        "ctask_number":"TASK000000084161",
-        "profile":"daisy_jenkins_apiuser"
+        "status": "Failed",
+        "accountdetails":{},
+        "SNOWTicketID":"TASK000000084161",
     }
     
-    payload["ctask_number"] = snow_taskid
-    payload["ctask_object"]["u_status"] = build_status_code
+    payload["SNOWTicketID"] = snow_taskid
+    payload["status"] = build_status_code
 
     try:
         if(build_status_code == "910"):
-            payload["ctask_variable"] = {
+            payload["status"] = "Success"
+            payload["accountdetails"] = {
                 "account_name" : account_details["name"],
                 "account_id" : account_details["id"]
             }
@@ -84,24 +86,20 @@ def api_call(build_status_code,snow_taskid,account_details):
         # Make a POST request to the API with JSON payload
         payload_data = json.dumps(payload)
         logger.info(payload_data)
-        return {
-            'statusCode': 200,
-            'body': payload_data
-        }
-        # response = requests.put(api_endpoint, data=payload_data,headers={"Content-Type":"application/json"},auth=auth)
+        response = requests.post(api_endpoint, data=payload_data,headers={"Content-Type":"application/json"}, auth=snow_auth)
 
-        # # Check if the request was successful (status code 200)
-        # if response.status_code == 200:
-        #     return {
-        #         'statusCode': 200,
-        #         'body': response.json()
-        #     }
-        # else:
-        #     return {
-        #         'statusCode': response.status_code,
-        #         'body': response.json()
+        # Check if the request was successful (status code 200)
+        if response.status_code == 200:
+            return {
+                'statusCode': 200,
+                'body': response.json()
+            }
+        else:
+            return {
+                'statusCode': response.status_code,
+                'body': response.json()
                 
-        #     }
+            }
     except Exception as e:
         return {
             'statusCode': 500,
@@ -112,22 +110,16 @@ def api_call(build_status_code,snow_taskid,account_details):
 def lambda_handler(event, context):
     logger.info(f"The event from SNS topic {event}")
     logger.info(f"The context from SNS topic {context}")
-
-    if "Output" not in event:
-        print("It is not the message from account provisioning framerwork")
-        return "Output details aremissing from the SNS event payload. The Event message is not from account provisioning framerwork, skipping the lambda run"
-    elif "ExecutionArn" not in event:
-        print("ExecutionArn details are missing from the SNS event payload. The Event message is not  from account provisioning framerwork, skipping the lambda run")
-        return "Event message not from account provisioning framerwork, skipping the lambda run"
-    response_output = event["Output"]
-    account_vending_status = event["Status"]
-    create_pipeline_status = event["aft_account_provisioning_framework_create_pipeline"]["BuildStatus"]
+    account_response_output = event["Records"][0]['Sns']['Message']
+    account_response_output = account_response_output.replace("'", '"')
+    account_response_output_json = json.loads(account_response_output)
+    account_vending_status = account_response_output_json['account_info']['account']['status']
     customization_pipeline_status = "FAILED"
-    pipeline_name = response_output["account_info"]["account"]["id"] + "-customizations-pipeline"
-    snow_taskid = response_output["account_request"]["account_tags"]["snowTaskID"]
+    pipeline_name = account_response_output_json["account_info"]["account"]["id"] + "-customizations-pipeline"
+    snow_taskid = account_response_output_json["account_request"]["account_tags"]["SNOWTaskID"]
     customization_pipeline_status = get_last_execution_status(pipeline_name)
-    account_details = response_output["account_info"]["account"]
-    if(account_vending_status.upper() == create_pipeline_status.upper() == customization_pipeline_status.upper() == "SUCCEEDED" ):
+    account_details = account_response_output_json["account_info"]["account"]
+    if(account_vending_status.upper() == "ACTIVE" and customization_pipeline_status.upper() == "SUCCEEDED" ):
         logger.info("Build is successfull")
         api_call_status = api_call(build_status_code="910",snow_taskid=snow_taskid,account_details=account_details)
     else:
@@ -135,4 +127,3 @@ def lambda_handler(event, context):
         api_call_status = api_call(build_status_code="930",snow_taskid=snow_taskid,account_details=account_details) 
        
     logger.info(f"After the API call the output is {api_call_status}")
-    

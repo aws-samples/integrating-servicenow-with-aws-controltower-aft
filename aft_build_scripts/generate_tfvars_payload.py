@@ -7,7 +7,7 @@ import json
 def generate_account_tag(snow_payload_data):
     account_tags = {
         "Environment" : snow_payload_data["environment"],
-        "snowTaskID" : snow_payload_data["snowTicketID"]
+        "SNOWTaskID" : snow_payload_data["SNOWTicketID"]
     }
     return account_tags
 
@@ -17,20 +17,20 @@ def generate_tfvars_payload(snow_payload_data,config_map_data,tfvars_payload_dat
     account_tags = generate_account_tag(snow_payload_data)
     accountemail = snow_payload_data["accountEmail"]
     if not snow_payload_data["SSOUserFirstName"]:
-        SSOUserFirstName = snow_payload_data["changeRequestedby"]
+        SSOUserFirstName = snow_payload_data["change_requested_by"]
     else:
         SSOUserFirstName =  snow_payload_data["SSOUserFirstName"]
     if not snow_payload_data["SSOUserLastName"]:
-        SSOUserLastName = snow_payload_data["changeRequestedby"]
+        SSOUserLastName = snow_payload_data["change_requested_by"]
     else:
         SSOUserLastName =  snow_payload_data["SSOUserLastName"]
     SSOUserEmail = snow_payload_data["accountEmail"]
     account_customizations_name = config_map_data["businessunit_to_requestype"][snow_payload_data["businessUnit"]]["account_customizations_name"]
     workload_type = config_map_data["businessunit_to_requestype"][snow_payload_data["businessUnit"]]["request_type"] + "-" + snow_payload_data["cloudAccountType"]
     ManagedOrganizationalUnit = config_map_data["businessunit_to_requestype"][snow_payload_data["businessUnit"]]["managed_org_unit"][snow_payload_data["cloudAccountType"]]
-    snow_taskid = snow_payload_data["snowTicketID"]
+    snow_taskid = snow_payload_data["SNOWTicketID"]
     change_management_parameters = {
-        "change_requested_by" : snow_payload_data["changeRequestedby"],
+        "change_requested_by" : snow_payload_data["change_requested_by"],
         "change_reason" : snow_payload_data["change_reason"]
         }
     refined_tfvars_payload_data = tfvars_payload_data
@@ -64,4 +64,3 @@ with open(tfvars_payload_template_path , "r") as tfvars_payload_template_file:
     tfvars_payload_data = json.load(tfvars_payload_template_file)
 
 generate_tfvars_payload(snow_payload_data,config_map_data,tfvars_payload_data)
-

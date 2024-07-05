@@ -71,4 +71,3 @@ with open('workload.auto.tfvars.json.jinja2') as file_:
 
 
 generate_tfvars_json_file(new_generated_tfvars)
-

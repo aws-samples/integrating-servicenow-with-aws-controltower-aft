@@ -15,11 +15,11 @@
     ]
   },
   "context": {
-    "aft_account_request_repository": "aft-account-request-dev",
-    "snow_api_endpoint_url": "https://jnjdaisytest.service-now.com/api/jj/srm_inbound_request/updatetask",
+    "aft_account_request_repository": "< aft account vending repository >",
+    "snow_api_endpoint_url": "< service now endpoint URL >",
     "api_key_length": "32",
-    "aft_account_request_committer_email": "gopinjag@amazon.com",
-    "aft_account_request_committer_name": "Gopinath J",
+    "aft_account_request_committer_email": "<Replace with the commiter email that will be used during updating the AFT account vending repository>",
+    "aft_account_request_committer_name": "<Replace with the commiter name that will be used during updating the AFT account vending repository>",
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [
