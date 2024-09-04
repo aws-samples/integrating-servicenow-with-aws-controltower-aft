@@ -89,7 +89,7 @@ Suresh Poopandi - Principal Solutions Architect - GLS - ssurpo@amazon.com
 
 Ryan Griffin - Senior Cloud Infrastructure Architect - ryandg@amazon.com
 
-Balu Rajendran - Balu Rajendran - rajendbc@amazon.com
+Balu Rajendran - DevOps Consultant - rajendbc@amazon.com
 
 ## Security
 
