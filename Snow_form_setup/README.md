@@ -5,5 +5,5 @@ https://docs.servicenow.com/bundle/washingtondc-application-development/page/bui
 
 1. Login to ServiceNow as an Administrator
 2. In ServiceNow - Launch Studio
-3. Install the application code in Studio from the shared repository
+3. Install the application code in Studio from the ./Snow_form_setup/servicenow-aws-account-creation folder. Note, you may need to copy this folder to it's own git repository for ServiceNow to install the application.
 4. You should now be able to leverage the AWS Account Creation form in ServiceNow
