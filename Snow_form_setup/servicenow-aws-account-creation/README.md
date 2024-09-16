@@ -1,1 +1,0 @@
-# servicenow-aws-account-creation
