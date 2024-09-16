@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="AWS Account Request">915a485e47020210eb020b02d16d43ba</sc_cat_item>
+        <sc_category display_value="AWS Service Catalog">e7ec31440f1103004dae09bce1050eae</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-25 18:04:56</sys_created_on>
+        <sys_id>69bc6dc147030210eb020b02d16d43f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AWS Service Catalog.AWS Account Request</sys_name>
+        <sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope>
+        <sys_update_name>sc_cat_item_category_69bc6dc147030210eb020b02d16d43f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-25 18:04:56</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</application>
+        <file_path/>
+        <instance_id>877224f7dbeaf594199b172913961910</instance_id>
+        <instance_name>dev222068</instance_name>
+        <name>sc_cat_item_category_69bc6dc147030210eb020b02d16d43f7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="AWS Account Request">915a485e47020210eb020b02d16d43ba</sc_cat_item><sc_category display_value="AWS Service Catalog">e7ec31440f1103004dae09bce1050eae</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-06-25 18:04:56</sys_created_on><sys_id>69bc6dc147030210eb020b02d16d43f7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>AWS Service Catalog.AWS Account Request</sys_name><sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package><sys_policy/><sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope><sys_update_name>sc_cat_item_category_69bc6dc147030210eb020b02d16d43f7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-06-25 18:04:56</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>-880750335</payload_hash>
+        <record_name>AWS Service Catalog.AWS Account Request</record_name>
+        <reverted_from/>
+        <source>c056ec7947398210eb020b02d16d4385</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-25 18:04:56</sys_created_on>
+        <sys_id>e9bc6dc147030210eb020b02d16d43fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19050927f260000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-25 18:04:56</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>2dbc6dc1cf0302102aaf40cff9584ffb</update_guid>
+        <update_guid_history>2dbc6dc1cf0302102aaf40cff9584ffb:-880750335</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AWS Service Catalog.AWS Account Request">59ccedc147030210eb020b02d16d433f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-25 18:05:12</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>913f1c729a7c4c27a8f59c63f3312c51</sys_id>
+        <sys_metadata>69bc6dc147030210eb020b02d16d43f7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AWS Service Catalog.AWS Account Request</sys_name>
+        <sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope>
+        <sys_scope_delete display_value="">101ea72ef72141d8825c48432757f699</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_69bc6dc147030210eb020b02d16d43f7</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_69bc6dc147030210eb020b02d16d43f7">e9bc6dc147030210eb020b02d16d43fc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-25 18:05:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

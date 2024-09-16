@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/x_445072_accountcr/accountcreationaws_api</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>false</is_versioned>
+        <name>AccountCreationAWS API</name>
+        <namespace>x_445072_accountcr</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>accountcreationaws_api</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-25 19:45:50</sys_created_on>
+        <sys_id>a0938e8947430210eb020b02d16d43e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AccountCreationAWS API</sys_name>
+        <sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope>
+        <sys_update_name>sys_ws_definition_a0938e8947430210eb020b02d16d43e5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-25 19:45:50</sys_updated_on>
+    </sys_ws_definition>
+</record_update>

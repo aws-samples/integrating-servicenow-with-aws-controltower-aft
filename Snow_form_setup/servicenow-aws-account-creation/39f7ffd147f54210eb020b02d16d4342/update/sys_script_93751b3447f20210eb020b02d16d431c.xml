@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sc_req_item</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sc_req_item">cat_item=915a485e47020210eb020b02d16d43ba^EQ<item display_table="sc_cat_item" display_value="AWS Account Request" endquery="false" field="cat_item" goto="false" newquery="false" operator="=" or="false" value="915a485e47020210eb020b02d16d43ba"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create AWS Account</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+	
+	const userGR = new GlideRecord('sys_user');
+	userGR.get(gs.getUserID());
+	const firstName = userGR.getValue('first_name');
+	const lastName = userGR.getValue('last_name');
+
+    try {
+        var r = new sn_ws.RESTMessageV2('x_445072_accountcr.CreateAWSAccount', 'Create');
+        r.setStringParameterNoEscape('SSOUserFirstName', firstName);
+        r.setStringParameterNoEscape('environment', current.variables.environment);
+        r.setStringParameterNoEscape('cloudAccountType', current.variables.cloudAccountType);
+        r.setStringParameterNoEscape('businessUnit', current.variables.businessUnit);
+        r.setStringParameterNoEscape('accountName', current.variables.accountName);
+        r.setStringParameterNoEscape('change_requested_by', `${firstName} ${lastName}`);
+        r.setStringParameterNoEscape('accountEmail', current.variables.unique_email_address);
+        r.setStringParameterNoEscape('SSOUserLastName', lastName);
+		r.setStringParameterNoEscape('change_reason', current.variables.change_reason);
+        r.setStringParameterNoEscape('SNOWTicketID', current.number);
+
+		
+	r.setRequestHeader('Authorization', 'lp71vdw34sqin8ar0hebyzk26tuc5jmg');
+        //override authentication profile 
+        //authentication type ='basic'/ 'oauth2'
+        //r.setAuthenticationProfile(authentication type, profile name);
+
+        //set a MID server name if one wants to run the message on MID
+        //r.setMIDServer('MY_MID_SERVER');
+
+        //if the message is configured to communicate through ECC queue, either
+        //by setting a MID server or calling executeAsync, one needs to set skip_sensor
+        //to true. Otherwise, one may get an intermittent error that the response body is null
+        //r.setEccParameter('skip_sensor', true);
+
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+    } catch (ex) {
+        var message = ex.message;
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-12 20:49:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>93751b3447f20210eb020b02d16d431c</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Create AWS Account</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope>
+        <sys_update_name>sys_script_93751b3447f20210eb020b02d16d431c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-27 16:31:42</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=93751b3447f20210eb020b02d16d431c"/>
+</record_update>

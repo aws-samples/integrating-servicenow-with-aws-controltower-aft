@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+    "accountName": "${accountName}",&#13;
+    "businessUnit": "${businessUnit}",&#13;
+    "cloudAccountType": "${cloudAccountType}",&#13;
+    "environment": "${environment}",&#13;
+    "SNOWTicketID": "${SNOWTicketID}",&#13;
+    "accountEmail": "${accountEmail}",&#13;
+    "change_requested_by": "${change_requested_by}",&#13;
+    "change_reason": "${change_reason}",&#13;
+    "SSOUserFirstName": "${SSOUserFirstName}",&#13;
+    "SSOUserLastName": "${SSOUserLastName}"&#13;
+}</content>
+        <function_name>Create</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>CreateAWSAccount [ Create ]</qualified_name>
+        <rest_endpoint>https://mbg9p26rn5.execute-api.us-east-1.amazonaws.com/dev/build</rest_endpoint>
+        <rest_message display_value="CreateAWSAccount">8123df7047f20210eb020b02d16d433b</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-12 20:44:08</sys_created_on>
+        <sys_id>2e4393b047f20210eb020b02d16d435c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Create</sys_name>
+        <sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope>
+        <sys_update_name>sys_rest_message_fn_2e4393b047f20210eb020b02d16d435c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-27 13:25:21</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

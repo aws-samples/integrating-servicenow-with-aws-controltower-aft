@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="unique_email_address" label="Unique Email Address" language="en" table="x_445072_accountcr_aws_account_data">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>unique_email_address</element>
+            <help/>
+            <hint/>
+            <label>Unique Email Address</label>
+            <language>en</language>
+            <name>x_445072_accountcr_aws_account_data</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-12 20:52:27</sys_created_on>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Unique Email Address</sys_name>
+            <sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope>
+            <sys_update_name>sys_documentation_x_445072_accountcr_aws_account_data_unique_email_address_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-12 20:52:28</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

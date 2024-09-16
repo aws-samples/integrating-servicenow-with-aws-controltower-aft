@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="AWS Account Request">915a485e47020210eb020b02d16d43ba</sc_cat_item>
+        <sc_catalog display_value="Technical Catalog">742ce428d7211100f2d224837e61036d</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-10 15:07:49</sys_created_on>
+        <sys_id>6a0b849e47020210eb020b02d16d433f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technical Catalog.AWS Account Request</sys_name>
+        <sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_6a0b849e47020210eb020b02d16d433f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-10 15:07:49</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</application>
+        <file_path/>
+        <instance_id>877224f7dbeaf594199b172913961910</instance_id>
+        <instance_name>dev222068</instance_name>
+        <name>sc_cat_item_catalog_6a0b849e47020210eb020b02d16d433f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="AWS Account Request">915a485e47020210eb020b02d16d43ba</sc_cat_item><sc_catalog display_value="Technical Catalog">742ce428d7211100f2d224837e61036d</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-05-10 15:07:49</sys_created_on><sys_id>6a0b849e47020210eb020b02d16d433f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Technical Catalog.AWS Account Request</sys_name><sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package><sys_policy/><sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope><sys_update_name>sc_cat_item_catalog_6a0b849e47020210eb020b02d16d433f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-05-10 15:07:49</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>1977053264</payload_hash>
+        <record_name>Technical Catalog.AWS Account Request</record_name>
+        <reverted_from/>
+        <source>c056ec7947398210eb020b02d16d4385</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-10 15:07:49</sys_created_on>
+        <sys_id>ea0b849e47020210eb020b02d16d4342</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f630bd0680000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-10 15:07:49</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>2e0b849ea4020210a3579bba1cd36641</update_guid>
+        <update_guid_history>2e0b849ea4020210a3579bba1cd36641:1977053264</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Technical Catalog.AWS Account Request">e41bc49e47020210eb020b02d16d4312</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-10 15:07:57</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>1ad28b1078654e2b8af24e1a7447b461</sys_id>
+        <sys_metadata>6a0b849e47020210eb020b02d16d433f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technical Catalog.AWS Account Request</sys_name>
+        <sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package>
+        <sys_parent display_value="AWS Account Request">915a485e47020210eb020b02d16d43ba</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope>
+        <sys_scope_delete display_value="">101ea72ef72141d8825c48432757f699</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_6a0b849e47020210eb020b02d16d433f</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_6a0b849e47020210eb020b02d16d433f">ea0b849e47020210eb020b02d16d4342</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-10 15:07:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
