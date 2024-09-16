@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="f90657f047f20210eb020b02d16d4399" sys_domain="global" table="x_445072_accountcr_aws_account_data" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-12 20:50:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8206537447f20210eb020b02d16d43b2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_445072_accountcr_aws_account_data" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">f90657f047f20210eb020b02d16d4399</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">ce06537447f20210eb020b02d16d4393</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-12 20:50:54</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-12 20:50:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce06937447f20210eb020b02d16d433d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_445072_accountcr_aws_account_data" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">f90657f047f20210eb020b02d16d4399</sys_ui_form>
+            <sys_ui_section caption="Item Details" display_value="Item Details" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">4606937447f20210eb020b02d16d433a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-12 20:50:55</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-12 20:50:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0206537447f20210eb020b02d16d43b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_445072_accountcr_aws_account_data" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">f90657f047f20210eb020b02d16d4399</sys_ui_form>
+            <sys_ui_section caption="Process Engine" display_value="Process Engine" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">8606537447f20210eb020b02d16d43b2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-12 20:50:54</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-12 20:50:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ca06537447f20210eb020b02d16d43b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_445072_accountcr_aws_account_data" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">f90657f047f20210eb020b02d16d4399</sys_ui_form>
+            <sys_ui_section caption="Picture" display_value="Picture" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">0606537447f20210eb020b02d16d43b6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-12 20:50:54</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-12 20:50:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4206937447f20210eb020b02d16d433a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_445072_accountcr_aws_account_data" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">f90657f047f20210eb020b02d16d4399</sys_ui_form>
+            <sys_ui_section caption="Pricing" display_value="Pricing" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">ce06537447f20210eb020b02d16d43b9</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-12 20:50:55</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-12 20:50:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b506537447f20210eb020b02d16d4393</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_445072_accountcr_aws_account_data" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">f90657f047f20210eb020b02d16d4399</sys_ui_form>
+            <sys_ui_section caption="Portal Settings" display_value="Portal Settings" name="x_445072_accountcr_aws_account_data" sys_domain="global" view="Default view">b106537447f20210eb020b02d16d438d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-12 20:50:54</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_445072_accountcr_aws_account_data</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-12 20:50:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f90657f047f20210eb020b02d16d4399</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_445072_accountcr_aws_account_data</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="AccountCreationAWS" source="x_445072_accountcr">39f7ffd147f54210eb020b02d16d4342</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AccountCreationAWS">39f7ffd147f54210eb020b02d16d4342</sys_scope>
+            <sys_update_name>sys_ui_form_sections_f90657f047f20210eb020b02d16d4399</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-06-12 20:50:54</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
