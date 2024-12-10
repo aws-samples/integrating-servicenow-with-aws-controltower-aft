@@ -83,7 +83,7 @@ cdk destroy
 ```
 ## Authors
 
-Gopinath Jagadesan - Senior Cloud Infrastructure Architect - gopinjag@amazon.com 
+Gopinath Jagadesan - Senior Solutions Architect - gopinjag@amazon.com 
 
 Suresh Poopandi - Principal Solutions Architect - GLS - ssurpo@amazon.com
 
